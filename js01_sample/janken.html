@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <h1>じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="computer">コンピュータの出した手は？</div>
+    <div id="judgment">結果は？</div>
+  </main>
+
+  <footer>フッター</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+      const min = 0;
+      const max = 2;
+      const MyHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      
+    $('#gu_btn').on('click', function () {
+        // MyHand, YourHandで0から2でランダムな数を作成
+      const min = 0;
+      const max = 2;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      // 相手0だったらグー，1だったらチョキ、2だったらパー．．．
+      // 結果(勝ち、負け、あいこ)を表示する
+        if (ComputerHand == 0) {
+          $('#judgment').html("結果は？⇒あいこ")
+        }
+        else if (ComputerHand == 1) { $('#judgment').html("結果は？⇒勝ち") }
+        else if (ComputerHand == 2) { $('#judgment').html("結果は？⇒負け") }
+        // 結果をidで指定した場所に表示
+      if (ComputerHand == 0) {
+        $('#computer').html("コンピュータの出した手は？⇒グー")
+      }
+      else if (ComputerHand == 1) { $('#computer').html("コンピュータの出した手は？⇒チョキ") }
+      else if (ComputerHand == 2) { $('#computer').html("コンピュータの出した手は？⇒パー") }      });
+　　
+    $('#cho_btn').on('click', function () {
+      // MyHand, YourHandで0から2でランダムな数を作成
+      const min = 0;
+      const max = 2;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      // 相手0だったらグー，1だったらチョキ、2だったらパー．．．
+      // 結果(勝ち、負け、あいこ)を表示する
+      if (ComputerHand == 0) {
+        $('#judgment').html("結果は？⇒負け")
+      }
+      else if (ComputerHand == 1) { $('#judgment').html("結果は？⇒あいこ") }
+      else if (ComputerHand == 2) { $('#judgment').html("結果は？⇒勝ち") }
+       // 相手の手（グー、チョキ、パーを表示する）
+      if (ComputerHand == 0) {
+        $('#computer').html("コンピュータの出した手は？⇒グー")
+      }
+      else if (ComputerHand == 1) { $('#computer').html("コンピュータの出した手は？⇒チョキ") }
+      else if (ComputerHand == 2) { $('#computer').html("コンピュータの出した手は？⇒パー") }
+    });
+
+    $('#par_btn').on('click', function () {
+      // MyHand, YourHandで0から2でランダムな数を作成
+      const min = 0;
+      const max = 2;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      // 相手0だったらグー，1だったらチョキ、2だったらパー．．．
+      // 結果(勝ち、負け、あいこ)を表示する
+      if (ComputerHand == 0) {
+        $('#judgment').html("結果は？⇒勝ち")
+      }
+      else if (ComputerHand == 1) { $('#judgment').html("結果は？⇒負け") }
+      else if (ComputerHand == 2) { $('#judgment').html("結果は？⇒あいこ") }
+      // 相手の手（グー、チョキ、パーを表示する）
+      if (ComputerHand == 0) {
+        $('#computer').html("コンピュータの出した手は？⇒グー")
+      }
+      else if (ComputerHand == 1) { $('#computer').html("コンピュータの出した手は？⇒チョキ") }
+      else if (ComputerHand == 2) { $('#computer').html("コンピュータの出した手は？⇒パー") }
+    });
+
+
+
+    $(function () {
+      //ここに処理を追加
+    });
+  </script>
+
+</body>
+
+</html>

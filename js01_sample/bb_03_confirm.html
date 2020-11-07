@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>能力確認画面</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1>能力確認画面</h1>
+  </header>
+
+  <main>
+    
+  </main>
+
+  <footer>フッター</footer>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+      const min = 0;
+      const max = 2;
+      const MyHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      
+    $('#gu_btn').on('click', function () {
+        // MyHand, YourHandで0から2でランダムな数を作成
+      const min = 0;
+      const max = 2;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      // 相手0だったらグー，1だったらチョキ、2だったらパー．．．
+      // 結果(勝ち、負け、あいこ)を表示する
+        if (ComputerHand == 0) {
+          $('#judgment').html("結果は？⇒あいこ")
+        }
+        else if (ComputerHand == 1) { $('#judgment').html("結果は？⇒勝ち") }
+        else if (ComputerHand == 2) { $('#judgment').html("結果は？⇒負け") }
+        // 結果をidで指定した場所に表示
+      if (ComputerHand == 0) {
+        $('#computer').html("コンピュータの出した手は？⇒グー")
+      }
+      else if (ComputerHand == 1) { $('#computer').html("コンピュータの出した手は？⇒チョキ") }
+      else if (ComputerHand == 2) { $('#computer').html("コンピュータの出した手は？⇒パー") }      });
+　　
+    $('#cho_btn').on('click', function () {
+      // MyHand, YourHandで0から2でランダムな数を作成
+      const min = 0;
+      const max = 2;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      // 相手0だったらグー，1だったらチョキ、2だったらパー．．．
+      // 結果(勝ち、負け、あいこ)を表示する
+      if (ComputerHand == 0) {
+        $('#judgment').html("結果は？⇒負け")
+      }
+      else if (ComputerHand == 1) { $('#judgment').html("結果は？⇒あいこ") }
+      else if (ComputerHand == 2) { $('#judgment').html("結果は？⇒勝ち") }
+       // 相手の手（グー、チョキ、パーを表示する）
+      if (ComputerHand == 0) {
+        $('#computer').html("コンピュータの出した手は？⇒グー")
+      }
+      else if (ComputerHand == 1) { $('#computer').html("コンピュータの出した手は？⇒チョキ") }
+      else if (ComputerHand == 2) { $('#computer').html("コンピュータの出した手は？⇒パー") }
+    });
+
+    $('#par_btn').on('click', function () {
+      // MyHand, YourHandで0から2でランダムな数を作成
+      const min = 0;
+      const max = 2;
+      const ComputerHand = Math.floor(Math.random() * (max - min + 1)) + 0;
+      // 相手0だったらグー，1だったらチョキ、2だったらパー．．．
+      // 結果(勝ち、負け、あいこ)を表示する
+      if (ComputerHand == 0) {
+        $('#judgment').html("結果は？⇒勝ち")
+      }
+      else if (ComputerHand == 1) { $('#judgment').html("結果は？⇒負け") }
+      else if (ComputerHand == 2) { $('#judgment').html("結果は？⇒あいこ") }
+      // 相手の手（グー、チョキ、パーを表示する）
+      if (ComputerHand == 0) {
+        $('#computer').html("コンピュータの出した手は？⇒グー")
+      }
+      else if (ComputerHand == 1) { $('#computer').html("コンピュータの出した手は？⇒チョキ") }
+      else if (ComputerHand == 2) { $('#computer').html("コンピュータの出した手は？⇒パー") }
+    });
+
+
+
+    $(function () {
+      //ここに処理を追加
+    });
+  </script>
+
+</body>
+
+</html>

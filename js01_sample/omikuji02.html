@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>おみくじ</title>
+</head>
+
+<body>
+  <header>
+    <h1>おみくじ</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="pull">おみくじを引く</li>
+    </ul>
+    <p id="echo">結果は？</p>
+  </main>
+
+  <footer>フッター</footer>
+  ///*jqueryを読み込む*//////
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $('#pull').on('click', function () {
+        // 0から4でランダムな数を作成
+         const min = 0;
+         const max = 4;
+         const RandomNumber = Math.floor(Math.random() * (max - min + 1)) + 0;
+        // 0だったら大吉，1だったら中吉．．．
+         if (RandomNumber == 0) {
+        $('#echo').html("大吉")}
+         else if (RandomNumber == 1) {  $('#echo').html("中吉") }
+         else if (RandomNumber == 2) {  $('#echo').html("小吉") }
+         else if (RandomNumber == 3) {  $('#echo').html("凶") }
+         else {  $('#echo').html("大凶") }
+        // 結果をidで指定した場所に表示
+        if (RandomNumber == 0) {
+        console.log("大吉")}
+      else if (RandomNumber == 1) { console.log("中吉") }
+      else if (RandomNumber == 2) { console.log("小吉") }
+      else if (RandomNumber == 3) { console.log("凶") }
+      else { console.log("大凶") }
+        });
+
+       
+  </script>
+
+</body>
+
+</html>
